@@ -23,6 +23,28 @@
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- css scroll to top -->
+ <style>
+    /* window animation */
+    html{
+      scroll-behavior: smooth;
+    }
+      /* scroll back to top */
+    #btn-back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        border-radius: 50px;
+        background-color: #ff0561;
+      }
+      #btn-back-to-top:hover {
+        background-color:royalblue;
+      }
+ </style>
 
 </head>
 
@@ -34,8 +56,8 @@
 <main class="content-wrapper">
   <header class="white-text-container section-container">
     <div class="text-center">
-      <h1>I am Ankit Makwana</h1>
-      <h5>Laravel Developer</h5>
+       <h1 data-aos="zoom-in-up">I am Ankit Makwana</h1>
+      <h5 data-aos="zoom-in-up">Laravel Developer</h5>
       <p>
         <a class="fa-icon fa-icon-2x" href="https://facebook.com/" title="">
           <i class="fa fa-facebook"></i>
@@ -64,7 +86,7 @@
      <div class="col-xs-12">
 
         <div class="card">
-          <div class="card-block">
+          <div class="card-block" data-aos="flip-up">
             <h2>About me</h2>
             <div class="row">
               <div class="col-md-4">
@@ -81,7 +103,7 @@
         </div>
 <!-- start -->
         <div class="card">
-          <div class="card-block">
+          <div class="card-block" data-aos="flip-up">
             <h2>Bio</h2>
             <div class="row">
               <div class="col-md-4">
@@ -107,22 +129,22 @@
 <!-- end -->
 
 <!-- start -->
-        <div class="card">
-          <div class="card-block">
+          <div class="card">
+          <div class="card-block" data-aos="flip-up">
             <h2>Skill</h2>
             <div class="row">
               <div class="col-md-4">
                 <div class="language-experience">
                   <h3 class="h5">HTML / CSS / JavaScript</h3>
                   <h3 class="h5">Laravel</h3>
-                  <h3 class="h5">Full Stack</h3>
+                  <h3 class="h5">Bootstrap</h3>
                  
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="language-experience">
+                  <h3 class="h5">Full Stack</h3>
                   <h3 class="h5">Software Testing</h3>
-                  <h3 class="h5">QA, Menual</h3>
                   <h3 class="h5">Web Application Testing</h3>
                 
                 </div>
@@ -142,7 +164,7 @@
 
 <!-- start -->
         <div class="card">
-          <div class="card-block">
+          <div class="card-block" data-aos="flip-up">
             <h2>Work Experience</h2>
             <div class="work-experience">
               <small class="date">Dec 2023 - Apr 2024</small>
@@ -163,7 +185,7 @@
 
 <!-- start -->
         <div class="card">
-          <div class="card-block">
+          <div class="card-block" data-aos="flip-up">
             <h2>Projects</h2>
             <div class="work-experience">
               <small class="date">December 2023 - April 2024</small>
@@ -202,7 +224,7 @@
 
 <!-- start -->
         <div class="card">
-          <div class="card-block">
+          <div class="card-block" data-aos="flip-up">
             <h2>Education</h2>
             <div class="row">
 
@@ -242,7 +264,7 @@
 
   <!-- stat -->
         <div class="card">
-          <div class="card-block">
+          <div class="card-block" data-aos="flip-up">
             <h2>Language</h2>
             <div class="row">
               <div class="col-md-4">
@@ -267,7 +289,7 @@
 
 <!-- start -->
         <div class="card">
-          <div class="card-block">
+          <div class="card-block" data-aos="flip-up">
             <h2>Portfolio</h2>
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             
@@ -313,7 +335,7 @@
         </div>
 <!--end  -->
         <div class="card">
-          <div class="card-block">
+          <div class="card-block" data-aos="flip-up">
             <h2>Social Network</h2>
             <div class="row">
               <div class="col-md-3">
@@ -333,7 +355,7 @@
         </div>
 
         <div class="card">
-          <div class="card-block">
+          <div class="card-block" data-aos="zoom-in">
             <h2>Contact Me</h2>
             <form action="https://api.web3forms.com/submit" method="POST" class="reveal-content">
               <input type="hidden" name="access_key" value="67db11b5-46a8-4afa-97ac-0ae83ee34ab3">
@@ -394,6 +416,48 @@
     </div>
   </div>
 </footer>
+<!-- scroll button -->
+<button type="button" class="btn btn btn-floating btn-lg" id="btn-back-to-top">
+  <i class="fa fa-arrow-up" style="color: white;"></i>
+</button>
+<!-- scroll button -->
+<script>
+  //Get the button
+  let mybutton = document.getElementById("btn-back-to-top");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  // When the user clicks on the button, scroll to the top of the document
+  mybutton.addEventListener("click", backToTop);
+
+  function backToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     scrollRevelation('.card');
+  });
+</script>
+
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function (event) {
