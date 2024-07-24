@@ -38,6 +38,13 @@
 @import url("fonts.css");
 @import url("font-awesome.min.css");
 @import url("micons.css");
+@import url("lora/lora-regular-webfont.ttf");
+@import url("lora/lora-bold-webfont.ttf");
+@import url("lora/lora-italic-webfont.ttf");
+@import url("poppins/poppins-bold-webfont.ttf");
+@import url("poppins/poppins-medium-webfont.ttf");
+@import url("poppins/poppins-regular-webfont.ttf");
+@import url("poppins/poppins-semibold-webfont.ttf");
 
 
 /** 
