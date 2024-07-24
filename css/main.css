@@ -36,15 +36,8 @@
  * ------------------------------------------------------------------- 
  */
 @import url("fonts.css");
-@import url("font-awesome.min.css");
-@import url("micons.css");
-@import url("lora/lora-regular-webfont.ttf");
-@import url("lora/lora-bold-webfont.ttf");
-@import url("lora/lora-italic-webfont.ttf");
-@import url("poppins/poppins-bold-webfont.ttf");
-@import url("poppins/poppins-medium-webfont.ttf");
-@import url("poppins/poppins-regular-webfont.ttf");
-@import url("poppins/poppins-semibold-webfont.ttf");
+@import url("font-awesome/css/font-awesome.min.css");
+@import url("micons/micons.css");
 
 
 /** 
@@ -55,7 +48,6 @@
  */
 html {
 	font-size: 10px;
-	scroll-behavior: smooth;
 }
 
 @media only screen and (max-width:1024px) {
@@ -1302,7 +1294,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #intro {
-	background: #151515 url('intro-bg.jpg') no-repeat center bottom;
+	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -2103,7 +2095,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #services {
-	background: #313131 url('bg.jpg') no-repeat center;
+	background: #313131 url(../images/bg.jpg) no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
