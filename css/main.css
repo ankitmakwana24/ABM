@@ -1120,7 +1120,7 @@ header .logo a {
 	color: transparent;
 	width: 92px;
 	height: 15px;
-	/* background: url("../images/logo.png") no-repeat center; */
+	/* background: url("hairstyle (1).png") no-repeat center; */
 	background-size: 92px 15px;
 }
 
@@ -2598,3 +2598,10 @@ footer .copyright span:last-child::after {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+/* footer social icon */
+.footer-social a:hover{
+
+	color:#FF0077;
+	text-decoration: none;
+}
